@@ -5,7 +5,7 @@
 int fibonacci(int x) {
     if (x == 1 || x == 2) {
         printf("%dth fibonacci number is 1\n", x);
-        return 1;
+        return x-1;
     }
     printf("%dth fibonacci number is fibonacci(%d) + fibonacci(%d)\n", x, x-1, x-2);
     return fibonacci(x-1) + fibonacci(x-2);
