@@ -36,19 +36,23 @@ void enqueue() {
 }
 
 void dequeue() {
+    
     if (is_empty()) {
         printf("Attempt to Delete Empty Queue.\n");
         return;
     }
+    
     printf("Deleted Element: %d.\n", elements[beginning]);
     beginning = (beginning+1) % SIZE;
 }
 
 void display_queue() {
+    
     if (is_empty()) {
         printf("Queue is Empty.\n");
         return;
     }
+    
     printf("Queue Elements:");
     for (int i = beginning; i <= end; i += (i+1) % SIZE) {
         printf(" %d", elements[i]);
